@@ -1,4 +1,4 @@
-ar curQuestion = 0;
+var curQuestion = 0;
 var questions = document.querySelector("#questions");
 var timer = document.querySelector("#time");
 var choices = document.querySelector("#answerChoice");
@@ -10,17 +10,32 @@ var points = document.querySelector("#highScores");
 var cleared = document.querySelector("#clear");
 var questionsArr = [
     {
-        question: "testing",
-        answerChoices: ["testAnswer", "tesitn", "trissd", "tkkdf"],
-        correctAnswer: "testAnswer"
+        question: "Arrays in JavaScript can be used to store _______.",
+        answerChoices: ["Other Arrays", "Booleans", "Numbers and strings", "All of the above"],
+        correctAnswer: "All of the above"
     },
     {
-        question: "testing2",
-        answerChoices: ["testAnswer2", "tesitn", "trissd", "tkkdf"],
-        correctAnswer: "testAnswer2"
+        question: "A very useful tool used during development and debugging for printing content to the debugger is:",
+        answerChoices: ["for loops", "JavaScript", "console.log", "Terminal/Bash"],
+        correctAnswer: "console.log"
+    },
+    {
+        question: "String values must be enclosed within _______ when being assisgned to variables.",
+        answerChoices: ["Quotes", "Curly Brackets", "Parenthesis", "Commas"],
+        correctAnswer: "Quotes"
+    },
+    {
+        question: "The condition in an if/else statement is enclosed with _______.",
+        answerChoices: ["Curly Brackets", "Square Brackets", "Quotes", "Parenthesis"],
+        correctAnswer: "Curly Brackets"
+    },
+    {
+        question: "Commonly used data types DO NOT include:",
+        answerChoices: ["Numbers", "Strings", "Booleans", "Alerts"],
+        correctAnswer: "Alerts"
     }
 ]
-var time = questionsArr.length * 20;
+var time = questionsArr.length * 10;
 var timerId= 0;
 function timerCount(){
     time--;
@@ -61,23 +76,23 @@ function showQuestions(){
 }
 function clicked(){
     if (this.value !== questionsArr[curQuestion].correctAnswer) {
-        time -= 20;
+        time -= 10;
         if (time < 0) {
             time = 0;
         }
         timer.textContent = time;
         feedback.textContent = "Wrong!";
         feedback.style.color = "red";
-        feedback.style.fontSize = "400%";
+        feedback.style.fontSize = "200%";
     }else{
         feedback.textContent = "Correct!";
         feedback.style.color = "green";
-        feedback.style.fontSize = "400%";
+        feedback.style.fontSize = "200%";
     }
     feedback.setAttribute("class", "feedback");
     setTimeout(function() {
         feedback.setAttribute("class", "feedback hide");
-    }, 3000);
+    }, 700);
     curQuestion++;
     if (curQuestion === questionsArr.length) {
         endQuiz();
