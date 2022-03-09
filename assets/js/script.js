@@ -83,11 +83,9 @@ function clicked(){
         timer.textContent = time;
         feedback.textContent = "Wrong!";
         feedback.style.color = "red";
-        feedback.style.fontSize = "200%";
     }else{
         feedback.textContent = "Correct!";
         feedback.style.color = "green";
-        feedback.style.fontSize = "200%";
     }
     feedback.setAttribute("class", "feedback");
     setTimeout(function() {

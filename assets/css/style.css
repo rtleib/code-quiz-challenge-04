@@ -1,3 +1,35 @@
+body{
+    background-image: url("../images/light-blue-backgrounds-4.jpeg");
+    font-family: Impact, Arial, Helvetica, sans-serif;
+}
+.timer{
+    font-size: 24px;
+    text-align: right;
+    margin-right: 10px;
+}
+h1{
+    font-size: 40px;
+}
+p{
+    font-size: 24px;
+}
+.start{
+    text-align: center;
+}
+button{
+    background-color:skyblue;
+    color: black;
+    font-family: Impact, Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    padding: 12px 40px;
+    border-radius: 12px;
+    width: 350px;
+}
+.choices button{
+    display: block;
+    margin: 6px;
+    text-align: left;
+}
 .hide{
     display: none;
 }
@@ -5,17 +37,13 @@
     margin: 100px auto 0 auto;
     max-width: 600px;
 }
-.start{
-    text-align: center;
-}
-.choices button{
-    display: block;
-}
 .feedback{
-    font-style: italic;
-    font-size: 120%;
+    font-style: oblique;
+    font-size: 24px;
     margin-top: 20px;
     padding-top: 10px;
-    color: gray;
-    border-top: 2px solid rgb(201, 193, 193);
+    border-top: 4px solid black;
 }
+/* .highScores{
+    margin-right: 300px;
+} */
